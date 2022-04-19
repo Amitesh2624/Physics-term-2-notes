@@ -1,0 +1,251 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\Tau}{\mathrm{T}}
+\title{Wave Optics}
+\author{Amitesh Anand Pandey}
+\date{February 2022}
+
+\begin{document}
+\maketitle
+\section{Huygen's Principle}
+\emph{Wavefront}: Defined as a surface of particles oscillating simultaneously with the same phase difference.\newline \\
+\emph{Speed of the Wave}: Speed of the wave is defined as the speed with which a wavefront moves away from its source.\newline \\
+Types of wavefronts:
+\begin{enumerate}
+    \item If the source emits waves uniformly in all directions: Wavefronts are concentric spheres centered at the source. 
+    \item If the source is at a large distance from point of observation: Wavefronts are parallel planes.
+\end{enumerate}
+\textbf{Huygen's Principle: } Huygen's principle states that each point on a wavefront acts as a secondary source, producing secondary wavelets. A common tangent to all these wavelets after time $t = \tau + t_i$ represents the wavefront after $\tau$ seconds. 
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=2.5cm]{wavefront1.PNG}
+    \caption{Sample Construction}
+    \label{fig:galaxy}
+\end{figure}
+\newpage
+\subsection{Proving Snell's Law using Huygen's Principle}
+In Figure 2, let $A'A$ and $BC$ be the incident rays and $AB$ be the incident wavefront. Clearly, if light takes $\tau$ time to reach $C$ from $B$, the distance $BC = v_1 \tau$ where $v_1$ is the speed of light in medium 1. Meanwhile, light that was at $A$ while light from the other ray was at $B$ must have travelled a distance $v_2\tau$ in this time. Constructing a wavelet of radius $v_2 \tau$ from $A$ and constructing its tangent from $C$ gives us the refracted wavefront. We call this point of tangency $E$. \newline
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{refrction.png}
+    \caption{Construction}
+    \label{fig:galaxy}
+\end{figure}
+\newline
+In $\Delta ABC$,
+\begin{equation*}
+    \sin{i} = \frac{BC}{AC} = \frac{v_1 \tau}{AC}
+\end{equation*}
+In $\Delta AEC$,
+\begin{equation*}
+    \sin{r} = \frac{AE}{AC} = \frac{v_2 \tau}{AC}
+\end{equation*} \\ 
+By dividing the two expressions, we obtain
+\begin{equation}
+    \frac{\sin i}{\sin r} = \frac{v_1}{v_2}
+\end{equation}
+If $n_1 = \frac{c}{v_1}$ is the refractive index of medium 1, and $n_2 = \frac{c}{v_2}$ is the refractive index of medium 2, then we can rewrite (1) as:
+\begin{equation}
+    \frac{\sin i}{\sin r}  = \frac{n_2}{n_1}
+\end{equation}
+This is what is known as the \emph{Snell's Law of Refraction}
+\newpage
+\subsection{Proving Laws of Reflection using Huygen's Principle}
+We consider two parallel incident rays of light striking the surface at $A$ and $C$. We construct the normal to the first incident ray intersecting the second incident ray ($BC$). $BC$ represents our incident wavefront. Then, we realize that in the time it takes from light $BC$ to strike the surface, the light from $A$ would have been reflected the same distance as $BC$. So, we construct an arc of radius $BC$ from A. Meanwhile, the Huygen source at $C$ would just have been activated. So, we per Huygen's Principle, we construct a tangent from C to the arc to obtain the reflected wavefront. Now, we simply construct the normal from the reflected wavefront to $A$ to obtain the reflected ray. \newline \\
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{reflection.PNG}
+    \caption{Construction}
+    \label{fig:galaxy}
+\end{figure}\\
+If light took $\tau$ time to reach $C$ from $B$, then $BC = v\tau$, similarly $AE = v\tau$. By $RHS$ congruency, $\Delta AEC$ is congruent to $\Delta CBA$ and hence $\angle i = \angle r$
+
+\section{Coherent and Incoherent Addition of Waves}
+\emph{Superposition Principle}: At a particular point in the medium, the resultant displacement produced by a number of waves is the vector sum of displacements produced by each of the waves. For waves $w_{1}...w_{n}$, if the displacement produced at $P$ are $\vec{y_{1}}...\vec{y_{n}}$, then the net displacement at $P$, $\vec{y_{net}}$ is:
+\begin{equation*}
+    \vec{y}_{net} = \sum_{i = 1}^{n} \vec{y_{i}}
+\end{equation*}
+\newpage
+\emph{Coherent Sources}: Two sources are said to be coherent if the phase difference between the waves they produce does not change in time. 
+\\ \newline
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=2.5cm]{sp.PNG}
+    \caption{$S_{1}P$ and $S_{2}P$}
+    \label{fig:galaxy}
+\end{figure}\\
+We have two identical waves (equal amplitude and wavelength) emanating from two points $S_{1}$ and $S_{2}$ in phase. We consider the intersection of the two waves at point $Q$ (equidistant from $S_1$ and $S_2$). Since the initial phase difference of the two waves was $0$, and both the waves now travel the same distance to $P$, the waves that arrive will also be in phase. Therefore, the displacements due the waves can be written as:
+\begin{equation*}
+    y_{1} = a\cos{\omega t}
+\end{equation*}
+\begin{equation*}
+    y_{2} = a\cos{\omega t}
+\end{equation*}
+Now, the resultant displacement at $P$ is given by
+\begin{equation*}
+    y_{net} = y_{1} + y_{2} = 2a\cos{\omega t}
+\end{equation*}
+Since the intensity of a wave $I \propto a^{2}$, the net intensity of the wave at $P$, $I$ is given by:
+\begin{equation*}
+    I = 4I_{0}
+\end{equation*}
+Here, $I_{0}$ represents the intensity of each of the individual waves. Now, if we consider a point $Q$ such that wave $S_{1}Q$ arrives at $Q$ 2 cycles before $S_{2}Q$, the path difference is:
+\begin{equation*}
+    S_{2}Q - S_{1}Q = 2 \lambda
+\end{equation*}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=4cm]{sq1.PNG}
+    \caption{$S_{1}Q$ and $S_{2}Q$}
+    \label{fig:galaxy}
+\end{figure}\\
+Since a path difference of $2\lambda$ represents a phase difference of $4\pi$, if $S_{1}Q$ is given by:
+\begin{equation*}
+    y_{1} = a\cos{\omega t}
+\end{equation*}
+Then the expression for $S_{2}Q$ is written as:
+\begin{equation*}
+    y_{2} = a\cos{(\omega t - 4\pi)} = a\cos{\omega t}
+\end{equation*}
+Once again, the net intensity will be $4I_{0}$, giving rise to \emph{Constructive Interference}. 
+\newpage
+We now consider a point $R$ such that $S_{1}R$ reaches $R$ 2.5 cycles after $S_{2}R$. In this case, if the wave from $S_{1}$ is written as:
+\begin{equation*}
+    y_{1} = a\cos{\omega t}
+\end{equation*}
+Then, since a path difference of $2.5\lambda$ corresponds to a phase difference of $5\pi$, we can express the second wave as:
+\begin{equation*}
+    y_{2} = a\cos{(\omega t + 5\pi)} = -a\cos{\omega t}
+\end{equation*}
+In this case, we realize that the net displacement \textbf{and} intensity at $R$ is 0. We call this as \emph{Destructive Interference}.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=4cm]{sq2.PNG}
+    \caption{$S_{1}R$ and $S_{2}R$}
+    \label{fig:galaxy}
+\end{figure}\\
+In general, for two coherent sources $S_{1}$ and $S_{2}$, then for a point $P$, if the path difference between the waves is:
+\begin{equation*}
+    S_{2}P \sim S_{1}P = n \lambda 
+\end{equation*}
+for $n \in N$, we will have constructive interference and the resultant intensity will be $4I_{0}$. On the other hand if
+\begin{equation*}
+    S_{2}P \sim S_{1}P = \big(n + \frac{1}{2})\lambda
+\end{equation*}
+for $n \in N$, we will have destructive interference and the net intensity will be 0. 
+\newpage
+If the phase difference between two waves emerging from two coherent sources is $\phi$, then if the first wave is:
+\begin{equation*}
+    y_{1} = a\cos{\omega t}
+\end{equation*}
+then, the second wave can be written as:
+\begin{equation*}
+    y_{2} = a\cos{(\omega t + \phi)}
+\end{equation*}
+The net resultant then becomes:
+\begin{equation*}
+    y_{net} = y_{1} + y_{2} = a\cos{\omega t} + a\cos{(\omega t + \phi)} = 2a\cos{\frac{\phi}{2}}\cos{(\omega t + \frac{\phi}{2})}
+\end{equation*}
+The resultant amplitude is $2a\cos{\frac{\phi}{2}}$ and the resultant intensity is $4I_{0}\cos^{2}{\frac{\phi}{2}}$ If $\phi = 0, \pm 2\pi, \pm 4\pi,...$ we will have the condition of constructive interference, and if $\phi = \pm \pi, \pm 3 \pi, \pm 5 \pi,...$ we will have the condition for destructive interference.
+\\ \newline
+Now, when the two sources are not coherent (i.e. the phase of difference between the waves they emit changes over time). For the cases in which the phase difference changes very rapidly over time, we consider a ``time-averaged" intensity and its expression is:
+\begin{equation*}
+    \langle \ I \ \rangle = 4I_{0} \cdot \langle \ \cos^{2}{\frac{\phi}{2}} \ \rangle 
+\end{equation*}
+If $\cos^{2}{\frac{\phi}{2}}$ varies between 0 and 1 very rapidly and randomly over time, intuitively, we can observe that its time-average will be $\frac{1}{2}$. In this case, the intensity becomes:
+\begin{equation*}
+    I = 2I_{0}
+\end{equation*}
+In general, when the sources are incoherent and the phase difference varies randomly and rapidly, it is observed that the resultant intensity is simply the sum of individual waves' intensities. 
+\section{Interference of Light and Young's Double Slit Experiment}
+To eliminate phase differences in two ordinary sources of light, Young pointed a single light source $S$ at two pinholes made on an opaque screen. The light from these pinholes was made to pass on another screen $GG'$. This set-up locked the two sources of light in phase to be coherent and indulge in proper interference. The arrangement for Young's experiment and a schematic diagram is included in Figure 7. \newpage
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{yg1.PNG}
+         \caption{Arrangement}
+         \label{fig:y equals x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{yg2.PNG}
+         \caption{Schematic Diagram}
+         \label{fig:three sin x}
+     \end{subfigure}
+    \caption{Young's Double Slit Experiment}
+    \label{fig:Young's Experiment}
+\end{figure}
+ We know that intensity to correspond to a maximum in interference, we must have:
+\begin{equation*}
+    S_{1}P - S_{2}P = n \lambda; \ n \in \{0,1,2...\}
+\end{equation*}
+From Figure 7(b) it is clear that:
+\begin{equation*}
+    {S_{2}P}^{2} = D^{2} + \bigg(x + \frac{d}{2} \bigg)^{2}
+\end{equation*}
+\begin{equation*}
+    {S_{1}P}^{2} = D^{2} + \bigg(x - \frac{d}{2}\bigg)^{2}
+\end{equation*}
+So for $S_{2}P^{2} - S_{1}P^{2}$ we have:
+\begin{equation*}
+    S_{2}P^{2} - S_{1}P^{2} = \Bigg[D^{2} + \bigg(x + \frac{d}{2} \bigg)^{2} \Bigg] - \Bigg[D^{2} + \bigg(x - \frac{d}{2}\bigg)^{2}\Bigg] = 2xd
+\end{equation*}
+\begin{equation*}
+    S_{2}P - S_{1}P = \frac{2xd}{S_{1}P+S_{2}P}
+\end{equation*}
+If $x, d <<< D$, we can replace $S_{2}P + S_{1}P$ with $2D$ to obtain:
+\begin{equation*}
+    S_{2}P - S_{1}P  \approx \frac{xd}{D}
+\end{equation*}
+We will have constructive interference when:
+\begin{equation*}
+    x = x_{n} = n \frac{\lambda D}{d}
+\end{equation*}
+We will have destructive interference when:
+\begin{equation*}
+    x = x_{n} = \bigg( n + \frac{1}{2} \bigg) \frac{\lambda D}{d}
+\end{equation*}
+\newpage
+These dark and white bands  observed on the $GG'$ screen as seen in Figure 8 are called \emph{fringes} and they are equidistant. The distance between two adjacent dark fringes (called \emph{fringe width}) is given by:
+\begin{equation*}
+    \beta = x_{n+1} - x_{n}  = \frac{\lambda D}{d}
+\end{equation*}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width = 12cm]{fg.PNG}
+    \caption{Fringe pattern}
+    \label{fig:y equals x}
+\end{figure}
+\section{Diffraction}
+\subsection{The Single Slit}
+In single slit diffraction, an intuitive idea about the wave intensity distribution on the scree can be obtained arithmetically. In figure 8, the path difference between NP and LP is as follows:
+\begin{equation*}
+    NP - LP = a\sin{\theta} \approx a\theta
+\end{equation*}
+In figure 9, consider $\theta$ of the form $\frac{n\lambda}{a}$ (say $\theta = \frac{\lambda}{a}$). Now, for each point $M_{1}$ in $LM$, there is a point $M_{2}$ in $MN$ such that $M_{1} - M_{2} = \frac{a}{2}$. Then, the path difference between waves from $M_{1}$ and $M_{2}$ is:
+\begin{equation*}
+    (M_{1} - M_{2})\theta = \frac{a}{2}\theta = \frac{\lambda}{2}
+\end{equation*}
+We realise that the above path difference satisfies the condition for \emph{destructive interference} and for all rays from points between $LM$, a point between $MN$ cancels the intensity out. Therefore, whenever $\theta = \frac{n\lambda}{2}$, we observe a minimum ($I = 0$)  intensity on the screen. 
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width = 7cm]{ss1.PNG}
+    \caption{Beams from the Slit}
+    \label{fig:y equals x}
+\end{figure}
+\newpage
+We now discuss some of the key features of diffraction from a single slit:
+\begin{enumerate}
+    \item The interference pattern has a number of equally spaced bright and dark bands. The pattern has a central maxima \textbf{twice as wide as the other maxima }($\frac{2\lambda D}{a}$)
+    \item We calculate the interference pattern by superposing two waves from two infinitesimally narrow slits. The overall pattern originates from the super position of a collection of waves throughout the slit. 
+    \item For a single slit of width $a$, the first minima occurs at $\theta = \frac{\lambda}{a}$, however for a double slit, we obtain a maxima for $\theta = \frac{\lambda}{a}$. 
+\end{enumerate}
+\subsection{Resolving Power of Telescopes}
+
+\end{document}
